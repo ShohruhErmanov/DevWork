@@ -133,14 +133,14 @@ export default function LoginPage() {
           <div className="grid grid-cols-2 gap-4 mb-8">
             <button
               type="button"
-              className="flex items-center justify-center gap-3 px-5 py-4 bg-[#1e293b] hover:bg-[#334155] border border-[#334155] rounded-xl text-base font-medium text-white transition-all duration-200 cursor-pointer hover:border-[#475569] active:scale-[0.98]"
+              className="flex items-center justify-center gap-3 px-5 py-5 bg-[#1e293b] hover:bg-[#334155] border border-[#334155] rounded-xl text-base font-medium text-white transition-all duration-200 cursor-pointer hover:border-[#475569] active:scale-[0.98]"
             >
               <FcGoogle className="w-6 h-6" />
               Google
             </button>
             <button
               type="button"
-              className="flex items-center justify-center gap-3 px-5 py-4 bg-[#1e293b] hover:bg-[#334155] border border-[#334155] rounded-xl text-base font-medium text-white transition-all duration-200 cursor-pointer hover:border-[#475569] active:scale-[0.98]"
+              className="flex items-center justify-center gap-3 px-5 py-5 bg-[#1e293b] hover:bg-[#334155] border border-[#334155] rounded-xl text-base font-medium text-white transition-all duration-200 cursor-pointer hover:border-[#475569] active:scale-[0.98]"
             >
               <FiGithub className="w-6 h-6" />
               GitHub
@@ -150,7 +150,7 @@ export default function LoginPage() {
           {/* Divider */}
           <div className="flex items-center gap-4 mb-8">
             <div className="flex-1 h-px bg-[#334155]" />
-            <span className="text-sm text-[#64748b]">yoki email bilan</span>
+            <span className="text-base text-[#64748b]">yoki email bilan</span>
             <div className="flex-1 h-px bg-[#334155]" />
           </div>
 
@@ -158,7 +158,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-7" noValidate>
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[#94a3b8] mb-2">
+              <label htmlFor="email" className="block text-base font-medium text-[#94a3b8] mb-2">
                 Email
               </label>
               <div className="relative">
@@ -171,7 +171,7 @@ export default function LoginPage() {
                     if (errors.email) setErrors(prev => ({ ...prev, email: '' }));
                   }}
                   placeholder="email@example.com"
-                  className={`w-full pl-5 pr-13 py-4.5 bg-[#1e293b] border text-base ${
+                  className={`w-full pl-5 pr-13 py-5 bg-[#1e293b] border text-base ${
                     errors.email ? 'border-red-500/50 focus:border-red-500' : 'border-[#334155] focus:border-[#6366f1]'
                   } rounded-xl text-white placeholder-[#64748b] outline-none transition-all duration-200 focus:ring-2 ${
                     errors.email ? 'focus:ring-red-500/20' : 'focus:ring-[#6366f1]/20'
@@ -192,7 +192,7 @@ export default function LoginPage() {
 
             {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-[#94a3b8] mb-2">
+              <label htmlFor="password" className="block text-base font-medium text-[#94a3b8] mb-2">
                 Parol
               </label>
               <div className="relative">
@@ -205,7 +205,7 @@ export default function LoginPage() {
                     if (errors.password) setErrors(prev => ({ ...prev, password: '' }));
                   }}
                   placeholder="••••••••"
-                  className={`w-full pl-5 pr-13 py-4.5 bg-[#1e293b] border text-base ${
+                  className={`w-full pl-5 pr-13 py-5 bg-[#1e293b] border text-base ${
                     errors.password ? 'border-red-500/50 focus:border-red-500' : 'border-[#334155] focus:border-[#6366f1]'
                   } rounded-xl text-white placeholder-[#64748b] outline-none transition-all duration-200 focus:ring-2 ${
                     errors.password ? 'focus:ring-red-500/20' : 'focus:ring-[#6366f1]/20'
@@ -248,12 +248,12 @@ export default function LoginPage() {
                     )}
                   </div>
                 </div>
-                <span className="text-sm text-[#94a3b8]">Eslab qolish</span>
+                <span className="text-base text-[#94a3b8]">Eslab qolish</span>
               </label>
 
               <Link
                 to="/forgot-password"
-                className="text-sm text-[#6366f1] hover:text-[#818cf8] transition-colors font-medium"
+                className="text-base text-[#6366f1] hover:text-[#818cf8] transition-colors font-medium"
               >
                 Parolni unutdingizmi?
               </Link>
@@ -263,7 +263,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-4.5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] hover:from-[#818cf8] hover:to-[#6366f1] text-white text-lg font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 active:scale-[0.98]"
+              className="w-full py-5 bg-gradient-to-r from-[#6366f1] to-[#4f46e5] hover:from-[#818cf8] hover:to-[#6366f1] text-white text-lg font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 active:scale-[0.98]"
             >
               {isLoading ? (
                 <>
@@ -283,7 +283,7 @@ export default function LoginPage() {
           </form>
 
           {/* Register Link */}
-          <p className="mt-10 text-center text-[#94a3b8]">
+          <p className="mt-10 text-center text-base text-[#94a3b8]">
             Hisobingiz yo'qmi?{' '}
             <Link
               to="/register"
